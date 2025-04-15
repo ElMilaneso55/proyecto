@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.tiendadelibros.tiendadelibros.PagoController"
+            style="-fx-background-color: linear-gradient(to bottom, #f0f2f5, #d9e2ef);">
+
+  <!-- Zona superior: Barra de navegación -->
+  <top>
+    <VBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 15;">
+      <Button text="ATRÁS" onAction="#volverAlInicio"
+              style="-fx-background-color: #FFFFFF; -fx-background-radius: 4; -fx-text-fill: #1E90FF; -fx-font-size: 14px;"/>
+      <Label text="MÉTODO DE PAGO"
+             style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #263238;"/>
+    </VBox>
+  </top>
+
+  <!-- Zona central: Panel con dos columnas -->
+  <center>
+    <HBox spacing="40" alignment="CENTER" style="-fx-padding: 30;">
+      
+      <!-- Panel izquierdo: Contenedor para detalles del producto -->
+      <VBox fx:id="productDetailsContainer" spacing="15" alignment="TOP_LEFT"
+            style="-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-border-color: #ccc; -fx-border-width: 1; -fx-background-radius: 10;">
+        <Label text="Detalles del Producto"
+               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+        <!-- Aquí se llenarán dinámicamente los detalles del producto -->
+      </VBox>
+      
+      <!-- Panel derecho: Opciones de pago -->
+      <VBox fx:id="paymentOptionsContainer" spacing="20" alignment="TOP_CENTER"
+            style="-fx-background-color: #FFFFFF; -fx-padding: 20; -fx-border-color: #ccc; -fx-border-width: 1; -fx-background-radius: 10;">
+        <Label text="Elige tu método de pago"
+               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+        <!-- Botones de opciones de pago -->
+        <Button text="Mercado Pago" onAction="#pagarConMercadoPago"
+                style="-fx-background-color: #1E90FF; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 10 20;"/>
+        <Button text="Visa" onAction="#pagarConVisa"
+                style="-fx-background-color: #1E90FF; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 10 20;"/>
+        <Button text="MasterCard" onAction="#pagarConMasterCard"
+                style="-fx-background-color: #1E90FF; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 10 20;"/>
+        <Button text="Efectivo" onAction="#pagarConEfectivo"
+                style="-fx-background-color: #1E90FF; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 10 20;"/>
+      </VBox>
+      
+    </HBox>
+  </center>
+
+</BorderPane>

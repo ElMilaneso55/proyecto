@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.tiendadelibros.tiendadelibros.RegistrarseController"
+            style="-fx-background-color: #f0f2f5;">
+
+  <!-- Franja superior: Título en fondo sólido -->
+  <top>
+    <VBox alignment="CENTER" style="-fx-background-color: #FF6347; -fx-padding: 20;">
+      <Label text="CREAR CUENTA" 
+             style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+    </VBox>
+  </top>
+
+  <!-- Centro: Tarjeta de registro -->
+  <center>
+    <VBox alignment="CENTER" spacing="15"
+          style="-fx-background-color: white; -fx-background-radius: 10; -fx-padding: 30;
+                 -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 2, 2);">
+      
+      <!-- Campo: Nombre -->
+      <VBox spacing="5" alignment="CENTER_LEFT">
+        <Label text="Nombre:" style="-fx-font-size: 16px; -fx-text-fill: #333333;"/>
+        <TextField fx:id="nombreField" promptText="Nombre" 
+                   style="-fx-pref-width: 300px; -fx-padding: 8;"/>
+      </VBox>
+      
+      <!-- Campo: Apellido -->
+      <VBox spacing="5" alignment="CENTER_LEFT">
+        <Label text="Apellido:" style="-fx-font-size: 16px; -fx-text-fill: #333333;"/>
+        <TextField fx:id="apellidoField" promptText="Apellido" 
+                   style="-fx-pref-width: 300px; -fx-padding: 8;"/>
+      </VBox>
+      
+      <!-- Campo: Correo -->
+      <VBox spacing="5" alignment="CENTER_LEFT">
+        <Label text="Correo:" style="-fx-font-size: 16px; -fx-text-fill: #333333;"/>
+        <TextField fx:id="correoField" promptText="Correo electrónico" 
+                   style="-fx-pref-width: 300px; -fx-padding: 8;"/>
+      </VBox>
+      
+      <!-- ComboBox de Sexo -->
+      <VBox spacing="5" alignment="CENTER_LEFT">
+        <Label text="Sexo:" style="-fx-font-size: 16px; -fx-text-fill: #333333;"/>
+        <ComboBox fx:id="sexoCombo" promptText="Seleccione su sexo" 
+                  style="-fx-pref-width: 300px;">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Masculino"/>
+              <String fx:value="Femenino"/>
+              <String fx:value="Otro"/>
+            </FXCollections>
+          </items>
+        </ComboBox>
+      </VBox>
+      
+      <!-- Campo: Contraseña -->
+      <VBox spacing="5" alignment="CENTER_LEFT">
+        <Label text="Contraseña:" style="-fx-font-size: 16px; -fx-text-fill: #333333;"/>
+        <PasswordField fx:id="passwordField" promptText="Contraseña" 
+                       style="-fx-pref-width: 300px; -fx-padding: 8;"/>
+      </VBox>
+      
+      <!-- Botón para crear la cuenta -->
+      <Button text="Crear Cuenta" onAction="#crearCuenta"
+              style="-fx-background-color: #1E90FF; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 30; -fx-padding: 10 40;"/>
+      
+      <!-- Botón para regresar a la página de inicio -->
+      <Button text="ATRÁS" onAction="#volverAlInicio"
+              style="-fx-background-color: #FF6347; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 30; -fx-padding: 8 20;"/>
+    </VBox>
+  </center>
+
+</BorderPane>

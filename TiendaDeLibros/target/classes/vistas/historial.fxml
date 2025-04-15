@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.tiendadelibros.tiendadelibros.HistorialController"
+            style="-fx-background-color: #f0f2f5;">
+  <!-- Franja superior con título -->
+  <top>
+    <HBox alignment="CENTER" style="-fx-background-color: #4682B4; -fx-padding: 20;">
+      <Label text="Historial de Compras" 
+             style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+    </HBox>
+  </top>
+  <!-- Área central: Contenedor para elementos del historial -->
+  <center>
+    <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;">
+      <content>
+        <VBox fx:id="historialContainer" spacing="15" alignment="CENTER" style="-fx-padding: 20;">
+          <Label text="Productos vistos recientemenete" style="-fx-font-size: 18px; -fx-text-fill: #333333;"/>
+        </VBox>
+      </content>
+    </ScrollPane>
+  </center>
+  <!-- Pie: Botón para regresar -->
+  <bottom>
+    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: #F8F8F8; -fx-padding: 15; -fx-border-color: #E0E0E0; -fx-border-width: 1;">
+      <Button text="ATRÁS" onAction="#volverAlInicio"
+              style="-fx-background-color: #4682B4; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 30; -fx-padding: 8 20;"/>
+    </HBox>
+  </bottom>
+</BorderPane>

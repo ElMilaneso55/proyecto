@@ -1,0 +1,16 @@
+com\tiendadelibros\tiendadelibros\VistaPrincipalController.class
+com\tiendadelibros\tiendadelibros\RegistrarseController.class
+com\tiendadelibros\tiendadelibros\clases\UsuarioDAO.class
+com\tiendadelibros\tiendadelibros\PagoController.class
+com\tiendadelibros\tiendadelibros\MasVendidoController.class
+com\tiendadelibros\tiendadelibros\CarroController.class
+com\tiendadelibros\tiendadelibros\HistorialController.class
+module-info.class
+com\tiendadelibros\tiendadelibros\clases\DBConnection.class
+com\tiendadelibros\tiendadelibros\LoginController.class
+com\tiendadelibros\tiendadelibros\CategoriaController.class
+com\tiendadelibros\tiendadelibros\clases\Libro.class
+com\tiendadelibros\tiendadelibros\FavoritoController.class
+com\tiendadelibros\tiendadelibros\App.class
+com\tiendadelibros\tiendadelibros\clases\LibroDAO.class
+com\tiendadelibros\tiendadelibros\DescuentoController.class
